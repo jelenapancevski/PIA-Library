@@ -1,0 +1,52 @@
+
+<div class="card">
+    <div class="card-body">
+        <img src="{{changedbook.image}}" alt="">
+        <input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" style='display: none;' (change)="onFileSelected($event)" #fileInput>
+                    <button class=" btn btn-light upload-btn" (click)="fileInput.click()">Upload photo</button>
+        <button *ngIf="changedbook.notborrowed==true" type="submit" class="btn btn-light" (click)="deleteBook()">Delete book </button>
+       
+      <form ngNativeValidate name="form1">
+        
+        <table class="table" >
+      
+            <tr>
+                <td> Title <input type="text" class="form-control " [(ngModel)]="changedbook.title" name="title" required>
+                Authors <input type="text" class="form-control " [(ngModel)]="changedbook.allauthors" name="authors" required>
+                Genres:<ul style="list-style-type:none; text-align: left;"> 
+                    <li *ngFor="let genre of changedbook.genres">
+                   {{genre}} 
+                    
+                    </li>
+                    </ul>  
+                </td>
+                <td> 
+            
+                Publisher<input type="text" class="form-control " [(ngModel)]="changedbook.publisher"   name="Publisher" required>
+               
+                Year published <input type="number" min="1900" max="2022" class="form-control " [(ngModel)]="changedbook.yearPublished" name="yearPublished" required>
+                
+                Language<input type="string" class="form-control " [(ngModel)]="changedbook.language" name="language" required>
+                </td>
+                <td>
+                    Quantity 
+                    <input type="number" name="qunatity" class="form-control "id="qunatity" [(ngModel)]="changedbook.quantity" min="0" required>
+                    Days to read 
+                    <input type="number" class="form-control " name="days" id="days" [(ngModel)]="changedbook.days" min="14" required>
+                   Select genres
+                    <select class="form-control" name="genres" id="genres" multiple size="1" [(ngModel)]="changedbook.selectedgenres" >
+                        <option *ngFor="let genre of genres" value="{{genre.name}}" selected="true" >{{genre.name}}</option>
+                    </select>
+                </td>
+                <td>
+                      <button type="submit" class="btn btn-light" (click)="UpdateBookInfo()">Save changes</button>
+                </td>
+            </tr>
+           
+    
+        </table>
+      </form>
+       
+
+    </div>
+  </div>

@@ -1,0 +1,11 @@
+frontend:
+npm install jquery --save
+ng add @ng-bootstrap/ng-bootstrap
+npm install chart.js --save
+
+npm install rxjs //nisam koristila
+npm install rxjs-compat --save //nisam koristila
+
+backend:
+npm install --save multer
+

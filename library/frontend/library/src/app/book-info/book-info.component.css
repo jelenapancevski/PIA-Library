@@ -1,0 +1,43 @@
+img{
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 480px;
+   
+}
+.frontimg {
+    margin-right: 1%;
+}
+.star{
+    max-width: 20px !important;
+    max-height:20px !important;
+}
+
+.starmini{
+    max-width: 15px !important;
+    max-height:15px !important;
+}
+
+.bookInfo {
+    font-size: large;
+}
+
+.comment{
+    background-color: rgb(255, 245, 234)!important;
+    border: 0ch;
+}
+
+.nonreadable :active{
+    outline:none;
+border: none;
+
+}
+.nonreadable :focus{
+    outline:none;
+border: none;
+
+}
+
+button:hover{
+    background-color: #d0ccf6;
+}

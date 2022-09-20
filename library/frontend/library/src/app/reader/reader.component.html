@@ -1,0 +1,74 @@
+<br>
+<h4 *ngIf="user.status=='blocked' || returnBooks.length>0 || exdeadlineBook.length>0 || maximum " style="color:rgb(47, 12, 81) ;">Notifications</h4>
+
+<div class="alert alert-danger" role="alert" *ngIf="user.status=='blocked'">
+    <img src="assets/danger.png" alt="" class="warning">
+    You have been blocked by administrator.
+
+</div>
+
+<div *ngFor="let book of returnBooks " class="alert alert-warning" role="alert" role="alert">
+    <img src="assets/warning.png" alt="" class="warning">
+    The deadline for returning the book: {{book.title}} by authors: {{book.allauthors}} will expire within two days.
+</div>
+
+<div *ngFor="let book of exdeadlineBook " class="alert alert-danger" role="alert">
+    <img src="assets/danger.png" alt="" class="warning">
+    The deadline for returning the book: {{book.title}} by authors: {{book.allauthors}} has expired.
+</div>
+
+<div *ngIf="maximum" class="alert alert-info" role="alert">
+    <img src="assets/info.png" alt="" class="info"> You have borrowed three books which is the maximum number of books
+    that you can borrow at a time.
+</div>
+
+
+
+<div class="alert alert-success" role="alert" *ngFor="let book of requestedBooks">
+    <img src="assets/success.png" alt="" class="reqsuccess">
+    Request for book {{book.title}} by authors: {{book.allauthors}} was accepted.
+</div>
+
+<div class="alert alert-primary" role="alert" *ngFor="let book of reservedBooks">
+    <img src="assets/success.png" alt="" class="reqsuccess">
+    Reserved book {{book.title}} by authors: {{book.allauthors}} is available and was added to the borrowed books.
+</div>
+
+<div style="display:flex; justify-content:center;" *ngIf="bookOfTheDay!=null">
+    <table>
+        <tr>
+            <td>
+                <h5>Book of the day</h5>
+            </td>
+        </tr>
+        <tr>
+            <td><img [src]="bookOfTheDay.image"  *ngIf="this.user.status=='blocked'" id='bookOfTheDay' alt="">
+            
+                <img [src]="bookOfTheDay.image" id='bookOfTheDay' *ngIf="this.user!=null && this.user.status!='blocked'" (click)="bookDetails(bookOfTheDay.id)">
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h6><b>Title:</b> {{bookOfTheDay.title}}</h6>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h6><b>Authors: </b>{{bookOfTheDay.allauthors}}</h6>
+            </td>
+        </tr>
+        <tr>
+            <td *ngIf="!noreviews && stars!=null">
+                <h6><b>Review: </b>{{review}} <img class='starmini' *ngFor="let star of stars" src="{{star}}"></h6>
+
+            </td>
+            <td *ngIf="noreviews && stars==null">
+                <i>Currently there are no reviews for this book.</i>
+            </td>
+
+        </tr>
+    </table>
+
+
+</div>

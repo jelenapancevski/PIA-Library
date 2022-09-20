@@ -1,0 +1,122 @@
+<br>
+<div class="profile">
+    <img src="{{user.image}}" alt="">
+</div>
+<div class="container-fluid">
+
+
+    <div class="profile">
+        <input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" style='display: none;'
+            (change)="onFileSelected($event)" #fileInput>
+        <button class=" btn upload-btn" (click)="fileInput.click()">Upload photo</button>
+    </div>
+
+
+    <div class="profile">
+        <form ngNativeValidate name="form">
+            <table>
+                <tr>
+                    <th>Firstname</th>
+                    <td><input type="text" class="form-control " [(ngModel)]="user.firstname" name="firstname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Lastname</th>
+                    <td><input type="text" class="form-control " [(ngModel)]="user.lastname" name="lastname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td><input type="text" class="form-control " [(ngModel)]="user.username" readonly name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type="password" class="form-control " [(ngModel)]="password" name="password" required>
+                    </td>
+                    <td> <button class="btn btn-light" (click)="editpass=true">Edit</button></td>
+                </tr>
+                <tr *ngIf="editpass">
+                    <th>New <br>
+                        password</th>
+                    <td><input type="password" class="form-control " [(ngModel)]="password1" name="password1" required>
+                        <input type="password" class="form-control " [(ngModel)]="password2" name="password2" required>
+                    </td>
+
+                </tr>
+                <tr *ngIf="editpass">
+                    <td colspan="2" align="center"> <button class="btn btn-light" (click)="changePassword()" style="float:right !important">Change
+                            password</button>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <th>Address</th>
+                </tr>
+
+                <tr>
+                    <th> Street &nbsp;</th>
+
+                    <td><input type="text" class="form-control " [(ngModel)]="user.address.street" name="street"
+                            required></td>
+                </tr>
+                <tr>
+                    <th> Number &nbsp;</th>
+
+                    <td><input type="text" class="form-control " [(ngModel)]="user.address.number" name="number"
+                            required></td>
+                </tr>
+                <tr>
+                    <th> City &nbsp;</th>
+
+                    <td><input type="text" class="form-control " [(ngModel)]="user.address.city" name="city" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Phone</th>
+                    <td><input type="tel" class="form-control " [(ngModel)]="user.phone" name="phone" required></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="text" class="form-control " [(ngModel)]="user.email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"  align="center">
+                        <button   type="submit" class="btn btn-light" (click)="saveChanges()"
+                           >Save changes</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+</div>
+<p style="text-align: center; color: brown;">{{message}}</p>
+<div *ngIf="editpass" style="text-align: left; display: flex; justify-content: center; margin-left:6%;">
+    Password must start with a letter and include at
+    least:<br> One special character, lower case and one upper case letter and a number.
+</div>
+
+
+
+
+
+<h4>Reading statistics</h4>
+
+<div class="chart-container" style=" height:40%; width:45%; float:left">
+
+    <canvas id="bookpergenre">
+        {{chart}}
+    </canvas>
+
+
+</div>
+
+<div class="chart-container" style=" height:40%; width:45%; float: right;">
+    <canvas id="bookpermonth">
+        {{chartmonth}}
+    </canvas>
+</div>

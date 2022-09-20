@@ -1,0 +1,14 @@
+.upload-btn:hover {
+    background-color: #d7d4f6;
+    border-color: gainsboro;
+}
+
+.regbutton {
+    align-content: center;
+   display: flex;
+   justify-content: center !important;
+}
+
+.reg{
+    color: rgb(47, 12, 81) 
+}

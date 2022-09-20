@@ -1,0 +1,18 @@
+img{
+    height:100% !important; 
+    max-height:200px !important;
+}
+
+.info {
+    height:100% !important; 
+    max-height:25px !important;
+    padding-bottom: 5px;
+}
+
+button {
+    margin: 1%;
+}
+
+button:hover{
+    background-color: #d0ccf6;
+}

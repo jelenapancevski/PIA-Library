@@ -1,0 +1,15 @@
+
+    <ngb-carousel id="slider">
+      <ng-template ngbSlide *ngFor="let book of topThree">
+
+        <div class="wrapper carousel-item">
+          <img [src]="book.image" class=".d-block" >
+        </div>
+        <div class="carousel-caption">
+          <h3 style="color:rgb(182, 65, 77) !important;"> {{book.title}}</h3> 
+          <h3 style="color:rgb(182, 65, 77) !important;"> {{book.authors[0].firstname}} 
+          {{book.authors[0].lastname}}</h3>  
+          
+        </div>
+      </ng-template>
+    </ngb-carousel>

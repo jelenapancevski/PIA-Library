@@ -1,0 +1,18 @@
+img {
+    max-width: 15%;
+    max-height: 15%;
+    border-radius: 50%;
+    border-color: #483d8b;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.profile {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+button:hover{
+    background-color: #d0ccf6;
+   
+}

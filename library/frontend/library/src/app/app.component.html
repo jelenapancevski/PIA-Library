@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class='d-flex flex-column min-vh-100 container-fluid body'>
+
+
+    <nav class=" navbar navbar-expand-sm navbar-expand-lg  navbar-extend-md  header" *ngIf=" user!=null && (user.type=='reader' || user.type=='moderator')">
+     
+        <img src="/assets/logo.png" alt="" id="logo" > 
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a  class="TitleContent" href="/topthree"> PIA Library</a>
+          </li>
+          <li class="nav-item">
+            <a  class="TitleContent" href="/reader"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a   class="TitleContent" href="/search"> Search books</a>
+          </li>
+          <li class="nav-item">
+            <a   class="TitleContent" href="/borrowed"> Borrowed books</a>
+          </li>
+          <li class="nav-item">
+            <a   class="TitleContent" href="/history">
+              History </a>
+          </li>
+          <li class="nav-item">
+            <a   class="TitleContent" href="/addbook"> Add book</a>
+          </li>
+          <li class="nav-item" *ngIf="user.type=='moderator'">
+            <a   class="TitleContent" href="/bookrequests"> Book requests</a>
+          </li>
+          
+          </ul>
+          <div class="nav-item form-inline ms-auto col-lg-2 " >
+            <a href="/profile" style="display: inline-block;"><img src="{{user.image}}" id="profilepic" ></a> 
+            {{user.username}}
+            <button class="btn btn-light form-inline" style="display: inline-block;" (click)="logout()" style="float: right; margin:2%">Logout</button>
+
+          </div>
+        
+      </nav>    
+      
+      <nav class=" navbar navbar-expand-sm navbar-expand-lg navbar-expand-md header navbar-light" *ngIf="user==null && !adminPage">
+     
+        <img src="/assets/logo.png" class="" alt="" id="logo" > 
+        <ul class="navbar-nav  " >
+          <li class="nav-item ">
+            <a  class="TitleContent" href="/"> PIA Library</a>
+          </li>
+          <li class="nav-item  ">
+            <a   class="TitleContent" href="/search"> Search books</a>
+          </li>
+         
+        </ul>
+        <form  class="nav-item form-inline formlogin ms-auto col-lg-8 col-md-12" ngNativeValidate  >
+          <label for="username" class=" " > Username</label><input type="text" name="username" class="form-control"  id="username" [(ngModel)]="username" required>
+          <label for="password">  Password </label> <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password" required>
+          <button class="btn btn-light" (click)="login()">Login</button>
+          <button class="btn btn-light " (click)="register()">Register</button>
+          {{message}}
+        </form>
+       
+       
+           
+          
+      </nav> 
+      
+      
+
+<router-outlet ></router-outlet>
+ 
+<footer class="footer text-center mt-auto" >Copyright 2022, Jelena Pančevski, Department of Software engineering, School of Electrical engineering, University of Belgrade</footer>
+ 
+</body>
+</html>

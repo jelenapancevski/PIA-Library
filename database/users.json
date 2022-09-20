@@ -1,0 +1,159 @@
+[{
+  "_id": {
+    "$oid": "62e8f96be37af64f6f0fabe7"
+  },
+  "username": "jelena",
+  "password": "Password123#",
+  "firstname": "Jelena",
+  "lastname": "Pancevski",
+  "address": {
+    "street": "Nehruova",
+    "number": "77",
+    "city": "Novi Beograd"
+  },
+  "phone": "0612289203",
+  "email": "jelenapancevski@gmail.com",
+  "type": "reader",
+  "status": "active",
+  "image": "assets/jelena.jpeg"
+},{
+  "_id": {
+    "$oid": "62ebb7e7631d734b1e7bad98"
+  },
+  "username": "nina",
+  "password": "Password123#",
+  "firstname": "Nina",
+  "lastname": "Petkovic",
+  "address": {
+    "street": "Nehruova",
+    "number": 88,
+    "city": "Beograd"
+  },
+  "phone": "0648592713",
+  "email": "ninapetkovic@gmail.com",
+  "type": "reader",
+  "status": "active",
+  "image": "assets/nina.jpeg"
+},{
+  "_id": {
+    "$oid": "62edaedd5f414557500beff9"
+  },
+  "username": "djole",
+  "password": "Password123#",
+  "firstname": "Djordje",
+  "lastname": "Milinovic",
+  "address": {
+    "street": "Brace Jerkovic",
+    "number": 149,
+    "city": "Beograd"
+  },
+  "phone": "0603003671",
+  "email": "djolemilinovic@gmail.com",
+  "type": "reader",
+  "status": "active",
+  "__v": 0,
+  "image": "assets/djole.jpeg"
+},{
+  "_id": {
+    "$oid": "62ee4d465f414557500beffb"
+  },
+  "username": "ninas",
+  "password": "Password123#",
+  "firstname": "Nina",
+  "lastname": "Stojanovic",
+  "address": {
+    "city": "Beograd",
+    "street": "Mileve Maric Ajnstajn",
+    "number": "122"
+  },
+  "phone": "0645895895",
+  "email": "casicanapotpetici@gmail.com",
+  "type": "reader",
+  "status": "active",
+  "__v": 0,
+  "image": "assets/ninas.jpeg"
+},{
+  "_id": {
+    "$oid": "62efb2f878497572b847fab7"
+  },
+  "username": "petitonion",
+  "password": "Password123#",
+  "firstname": "Jelena",
+  "lastname": "Lukic",
+  "address": {
+    "city": "Beograd",
+    "street": "Dimitrija Koturovica",
+    "number": 25
+  },
+  "phone": "0645872931",
+  "email": "petitonion@gmail.com",
+  "image": "assets/petitonion.jpeg",
+  "type": "moderator",
+  "status": "active",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62effb11631d734b1e7badc2"
+  },
+  "username": "admin",
+  "password": "Password123#",
+  "type": "admin",
+  "status": "active"
+},{
+  "_id": {
+    "$oid": "62f5141bd24ad137a06fcebd"
+  },
+  "username": "marija",
+  "password": "Password123#",
+  "firstname": "Marija",
+  "lastname": "Pancevski",
+  "address": {
+    "city": "Novi Beograd",
+    "street": "Nehruova",
+    "number": 93
+  },
+  "phone": "0613048491",
+  "email": "farmaceut23@gmail.com",
+  "image": "assets/marija.jpeg",
+  "type": "reader",
+  "status": "pending",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f51505d24ad137a06fcebf"
+  },
+  "username": "mixa",
+  "password": "Password123#",
+  "firstname": "Mihajlo",
+  "lastname": "Nikitovic",
+  "address": {
+    "city": "Beograd",
+    "street": "Kraljice Katarine",
+    "number": 22
+  },
+  "phone": "0658928761",
+  "email": "mixusmaxus@gmail.com",
+  "image": "assets/mixa.jpeg",
+  "type": "reader",
+  "status": "active",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630943414aeeed5fd0b003f0"
+  },
+  "username": "aki",
+  "password": "Password123#",
+  "firstname": "Aleksandra",
+  "lastname": "Milovic",
+  "address": {
+    "city": "Beograd",
+    "street": "Dusanovacka",
+    "number": 15
+  },
+  "phone": "064528956",
+  "email": "aki@gmail.com",
+  "image": "assets/aki.png",
+  "type": "reader",
+  "status": "pending",
+  "__v": 0
+}]

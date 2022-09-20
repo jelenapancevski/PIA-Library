@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "62e8fc5ae37af64f6f0fabf0"
+  },
+  "name": "Novel"
+},{
+  "_id": {
+    "$oid": "62e9e253e37af64f6f0fac08"
+  },
+  "name": "Classics"
+},{
+  "_id": {
+    "$oid": "62efa321631d734b1e7bada7"
+  },
+  "name": "Fantasy"
+},{
+  "_id": {
+    "$oid": "62efb568631d734b1e7badb4"
+  },
+  "name": "Horor"
+},{
+  "_id": {
+    "$oid": "630a281db5e61cea98fd23cd"
+  },
+  "name": "Historical"
+},{
+  "_id": {
+    "$oid": "630a2aeeb5e61cea98fd23d8"
+  },
+  "name": "Politics"
+},{
+  "_id": {
+    "$oid": "630a2d45b5e61cea98fd23dd"
+  },
+  "name": "Stories"
+},{
+  "_id": {
+    "$oid": "630a734cb5e61cea98fd23f2"
+  },
+  "name": "Mystery"
+},{
+  "_id": {
+    "$oid": "630a7369b5e61cea98fd23f3"
+  },
+  "name": "Thriller"
+},{
+  "_id": {
+    "$oid": "630b970cb5e61cea98fd2410"
+  },
+  "name": "Drama"
+},{
+  "_id": {
+    "$oid": "630b9bfcb5e61cea98fd2415"
+  },
+  "name": "Philosophy"
+}]

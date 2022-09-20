@@ -1,0 +1,89 @@
+<br>
+
+<div style="display:flex!important; justify-content: center!important">
+    <form  class="form-horizontal reg" ngNativeValidate #form >
+        <table >
+            <tr style="text-align: center!important;">
+                <td *ngIf="user==null"><h4>Registration</h4></td>
+                <td *ngIf="user!=null"><h4>New user</h4></td>
+                <td  colspan="2" style="display: flex; justify-content:center">
+                    <input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" style='display: none;' (change)="onFileSelected($event)" #fileInput>
+                    <button class=" btn  upload-btn" (click)="fileInput.click()">Upload photo</button>
+                 </td>
+            </tr>
+            
+            <tr >
+                <th>Firstname</th>
+                <td><input type="text" class="form-control " name="firstname" [(ngModel)]="firstname" required ></td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td><input type="text" class="form-control "  name="lastname"  [(ngModel)]="lastname" required></td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td><input type="text" class="form-control "  name="username" [(ngModel)]="username" required></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" class="form-control " name="password" [(ngModel)]="password" required></td>
+            </tr>
+            <tr>
+                <th> 
+               Confirm <br>
+               password</th>
+                <td><input type="password" class="form-control " name="passwordconfirm" [(ngModel)]="passwordconfirm" required>
+                </td>
+                
+            </tr>
+          
+            <tr>
+                <th>Address
+                    <!--<table>
+                        <tr>
+                            <th> Street &nbsp;</th>
+                             <td></td> <td><input type="text" class="form-control " name="street" [(ngModel)]="address.street" required></td>
+                        </tr>
+                        <tr>
+                            <th> Number &nbsp;</th>
+                            <td>  <td><input type="number" class="form-control " name="number" [(ngModel)]="address.number"required ></td>
+                        </tr>
+                        <tr>
+                            <th> City &nbsp;</th>
+                            <td>  <td><input type="text" class="form-control " name="city" [(ngModel)]="address.city"required ></td>
+                        </tr>
+                    </table>-->
+
+
+                </th>
+                <td>
+                    <input type="text" class="form-control " name="street" [(ngModel)]="addr" required placeholder="e.g. Street 14, City">
+                </td>
+                   
+                
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td><input type="text" class="form-control " [(ngModel)]="phone" name="phone" required placeholder="e.g. 061123456"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="text" class="form-control " [(ngModel)]="email" name="email" required></td>
+            </tr>
+           
+        
+            <tr >
+                <td colspan="2" align="center" *ngIf="user==null" > <button   type="submit" (click)="form.checkValidity()? registrate() : null" class="btn btn-light upload-btn " >Registrate</button></td>
+                <td colspan="2" align="center" *ngIf="user!=null"> <button   type="submit" (click)="form.checkValidity()? registrate() : null" class="btn btn-light upload-btn" >Add user</button></td>
+                
+            </tr>
+           
+        </table>
+    </form>
+   
+    
+</div>
+
+<div style="display:flex!important; justify-content: center!important; text-align: left;">
+        {{message}}
+</div>

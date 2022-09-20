@@ -1,0 +1,9 @@
+img{
+    height:100% !important; 
+    max-height:250px !important;
+}
+
+button:hover{
+    background-color: #d0ccf6;
+   
+}

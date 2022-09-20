@@ -1,0 +1,62 @@
+<br>
+<h3 style="color: rgb(47, 12, 81) ">Book requests</h3>
+<div class='row'  *ngFor="let book of bookrequests">
+    <div class="col" >
+        <table  class="card">
+            <tr>
+                <td> <a href="" ><img src="{{book.image}}" class='bookimg' alt=""></a></td>
+                <td>
+                    <table class="bookInfo">
+                        <tr>
+                            <th>Title</th>
+                            <td>{{book.title}}</td>
+                        </tr>
+                        <tr>
+                            <th> Authors </th>
+                            <td><ul style="list-style-type:none; text-align: left;"> 
+                                <li *ngFor="let author of book.authors">
+                                {{author.firstname}} &nbsp; {{ author.lastname}} 
+                                </li>
+                                </ul></td>
+                        </tr>
+                        <tr> 
+                            <th>Genres</th>
+                            <td>
+                                <ul style="list-style-type:none; text-align: left;"> 
+                                    <li *ngFor="let genre of book.genres">
+                                   {{genre}}  &nbsp;
+                                    
+                                    </li>
+                                    </ul>  
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Publisher</th>
+                            <td> {{book.publisher}}</td>
+                            
+                        </tr>
+                        <tr>
+                            <th>Year published</th>
+                            <td> {{book.yearPublished}}</td>
+                        </tr>
+                        <tr>
+                            <th>Language</th>
+                            <td>{{book.language}}</td>
+                        </tr>
+                        <tr>
+                            <th>User</th>
+                            <td>{{book.username}}</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <button class="btn btn-light" (click)="acceptRequest(book.id)">Accept request</button> &nbsp;
+                    <button class="btn btn-light"(click)="denyRequest(book.id)">Deny request</button>
+                </td>
+                
+            </tr>
+        </table>
+        
+    </div>
+   
+</div>

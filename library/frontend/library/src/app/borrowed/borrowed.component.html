@@ -1,0 +1,30 @@
+
+
+<div class="alert alert-info" role="alert"
+  *ngIf="borrowed.length==0">
+  <img src="assets/info.png" alt="" class="info">
+  There are no borrowed books
+  
+</div>
+<div class="card" *ngFor="let b of borrowed">
+    <div class="card-body">
+        <h4> {{b.title}}</h4>
+        <img src="{{b.image}}" alt=""> <br>
+        <b> Authors: </b> 
+        {{b.authors}}
+        <div *ngIf="!b.overdue">
+          <b>
+            Days left to read: 
+          </b> {{b.userdays}}
+        </div>
+        <div *ngIf="b.overdue" style="color:rgb(170, 59, 59)">
+            <b> <i>Deadline for returning the book has expired by {{b.userdays}} days </i></b>
+        </div>
+
+        <button class="btn btn-light" (click)="return(b.id)">Return book</button>
+        <button *ngIf="!b.extended && this.user.status!='blocked'" class="btn btn-light" (click)="extend(b.id)">Extend</button>
+         <button  (click)="bookDetails(b.id)" class="btn btn-light" *ngIf="this.user.status!='blocked'">Details</button>
+
+
+    </div>
+  </div>

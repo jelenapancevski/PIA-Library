@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.footer{
+   font-size: medium;
+   text-align: center;
+   background-color: #ffdab9;
+   margin-top: 5%;
+   height:50px;
+}
+
+.body {
+    /*background-color: #d0ccf6;*/
+    
+   padding: 0%  !important;
+}
+
+.header{
+   
+  
+}

@@ -1,0 +1,32 @@
+<br>
+<h4 style="color:rgb(47, 12, 81) !important;">Borrowing history</h4>
+
+
+<table class="table table-bordered table-sm" id="table">
+   
+    <thead> <tr>
+        <th class="th-sm headerSortUp">Book title 
+            <button class="btn btn-light" style="float:right;" (click)="sort(0)">sort</button>
+        </th>
+        <th class="th-sm">Authors  <button class="btn btn-light" style="float:right;" (click)="sort(1)" >sort</button> </th>
+        <th class="th-sm">Date taken  <button class="btn btn-light" style="float:right;" (click)="sort(2)" >sort</button> </th>
+        <th class="th-sm">Date returned  <button class="btn btn-light" style="float:right;" (click)="sort(3)">sort</button> </th>
+        <th class="th-sm"></th>
+    </tr>
+</thead> 
+<tbody>
+    <tr *ngFor="let borrow of borrowed">
+        <td>{{borrow.title}}</td>
+        <td>{{borrow.authors}}</td>
+        <td>{{borrow.dateTakenString}}</td>
+        <td>{{borrow.dateReturnedString}}</td>
+        <td>  <button (click)="bookDetails(borrow.id)" class="btn btn-light" *ngIf="this.user.status!='blocked'">Details</button>
+        </td>
+    </tr>
+</tbody>
+    
+</table>
+
+<script>
+    $('#table').DataTable();
+</script>

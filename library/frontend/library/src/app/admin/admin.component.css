@@ -1,0 +1,46 @@
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+
+#logo{
+    height:8%;
+    width:8%
+}
+
+.nav-item {
+    color: rgb(242, 173, 112)!important;
+}
+.TitleContent{
+    text-decoration: none;
+    color: rgb(242, 173, 112);
+    font-size: xx-large;
+    
+}
+
+#profilepicture{
+    max-width: 10% !important;
+    max-height: 10% !important;
+    border-radius: 50%;
+}
+
+.imag{
+    height:8%;
+    width:8% 
+}
+
+button {
+    margin:1%;
+
+}
+
+button:hover{
+    background-color: #d7d4f6;
+}
+
+.header {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: rgb(247, 239, 229);
+}

@@ -1,0 +1,166 @@
+
+<br>
+
+
+<h4 style="color: rgb(75, 16, 131); margin-left: 2%;">Search books</h4>
+<div class="container-fluid">
+    <form class="form">
+        <div class="row">
+        
+            <div class="col-sm-12 col-lg-12 form-inline">
+                
+                <label for="title">Title &nbsp; </label>   <input type="text" name="title" id="title" class="form-control" [(ngModel)]="title">
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <label for="authors">    Authors </label>  <input type="text" class="form-control" style=" background-color:rgb(252, 255, 255)!important" value="{{Authors}}" readonly> 
+                </div>
+                
+            </div>
+            <div class="row">
+                
+                    <form  class="col-sm-12 col-lg-12 form-inline">
+                        <label for="firstname"> Firstname &nbsp; </label><input type="text" name="firstname" id="firstname" class="form-control" [(ngModel)]="firstname" required>&nbsp;
+                        <label for="lastname"> Lastname  &nbsp;</label><input type="text" name="lastname" id="lastname" class="form-control" [(ngModel)]="lastname" required>&nbsp;
+                        <button type="submit"   class="btn btn-light" (click)="addAuthor()">Add Author</button>
+                    </form>
+                        
+               
+                
+            </div>
+    
+            <div class="row">
+                <div class="col-sm-12 col-lg-4"  *ngIf="!guest && this.user.status!='blocked'">
+                    <label for="genre">Genre</label> <select class="form-control" name="genres" id="genres" multiple size="1" [(ngModel)]="selectedGenres">
+                        <option *ngFor="let genre of genres" value="{{genre.name}}">{{genre.name}}</option>
+                    </select>
+                        
+                </div>
+                
+            </div>      
+            <div class="row">
+                <div class="col-sm-12 col-lg-12 "  *ngIf="!guest && this.user.status!='blocked'">
+                    <label for="yearPublished">  Year published </label> <br>
+                    <div class="form-inline"  *ngIf="!guest">
+                        <label for="from"> From  &nbsp; </label><input type="number" name="from" id="from" class="form-control" [(ngModel)]="from" min="1900" max="2022">&nbsp;
+                        <label for="to">  To &nbsp;</label> <input type="number" name="to" id="to" class="form-control" min="1900" max="2022" [(ngModel)]="to">
+                    </div>
+                    
+                </div>
+                
+            </div>            
+                    
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 form-inline"  *ngIf="!guest && this.user.status!='blocked'">
+                    <label for="publisher">  Publisher &nbsp; </label> <input type="text" name="publisher" id="publisher" class="form-control" [(ngModel)]="publisher"> 
+                </div>
+                
+            </div>      
+                    
+                    
+            <div class="row ">
+                <div class="col-sm-12 col-lg-6" align="center">
+                    <button (click)="search()" class="btn btn-light">Search</button> 
+                </div>
+                
+            </div>    
+    </form>
+    
+        
+    <div class="row " *ngIf="result" >
+        <div class="col-sm-12 col-lg-6 ">
+            <h5 style="color: rgb(75, 16, 131);">Search result for given parameters</h5>
+            <table class="table table-light table-striped table-bordered">
+                <tr>
+                    <th>Title</th> 
+                    <td> {{parameters[0]}}</td>
+                </tr>
+                <tr>
+                    <th>Authors</th> 
+                    <td> {{parameters[1]}}</td>
+                </tr>
+                <tr *ngIf="!guest">
+                    <th>Genre:</th> 
+                    <td> {{parameters[2]}}</td>
+                </tr>
+                <tr *ngIf="!guest">
+                    <th>Year published</th> 
+                    <td> {{parameters[3]}}-{{parameters[4]}}</td>
+                </tr>
+                <tr *ngIf="!guest">
+                    <th>Publisher</th> 
+                    <td> {{parameters[5]}}</td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>  
+                
+            
+     
+    
+    
+</div>
+<br>
+
+<div  *ngFor="let book of books">
+   
+        
+        <table class="card">
+            <tr>
+                <td><a href="" ><img src="{{book.image}}" class='bookimg' alt=""></a> </td>
+                <td>
+                    <table class="bookInfo">
+                        <tr>
+                            <td> <b>Title</b>
+                                {{book.title}}
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> <b>Authors </b> <ul style="list-style-type:none; text-align: left; display: inline;"> 
+                                <li *ngFor="let author of book.authors" style="display: inline;">
+                               <p> {{author.firstname}} &nbsp; {{ author.lastname}}</p> 
+                                
+                                </li>
+                                </ul> </td>
+                          
+                        </tr>
+                        <tr> 
+                            <td> <b> Genres</b>          
+                            <ul style="list-style-type:none; text-align: left; display: inline;"> 
+                                <li *ngFor="let genre of book.genres" style="display: inline;">
+                               {{genre}}  &nbsp;
+                                
+                                </li>
+                                </ul>                         </td>
+                         
+                        </tr>
+                        <tr>
+                            <td> <b>Publisher </b> {{book.publisher}} </td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td> <b>  Year published</b>
+                                {{book.yearPublished}}
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>  <b> Language </b>
+                            {{book.language}}</td>
+                        </tr>
+                    </table>
+                </td>
+                <td *ngIf="!guest && this.user.status!='blocked'" > <button (click)="bookDetails(book.id)" class="btn btn-light">Details</button></td>
+            </tr>
+        </table>
+        
+   
+   
+</div>
+
+
+

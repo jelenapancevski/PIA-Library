@@ -1,0 +1,59 @@
+<br>
+<div style="display:flex!important; justify-content: center!important">
+    <form  class="form-horizontal" ngNativeValidate #form id="form">
+        <table >
+            <tr style="text-align: center!important;">
+                <td ><h4>Add book</h4></td>
+            </tr>
+            <tr>
+                <th>Upload photo</th>
+                <td >
+                    <input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" style='display: none;' (change)="onFileSelected($event)" #fileInput>
+                    <button class=" btn upload-btn" (click)="fileInput.click()">Upload photo</button>
+                </td>
+            </tr>
+            <tr >
+                <th>Title</th>
+                <td><input type="text" class="form-control " name="title" [(ngModel)]="book.title" required ></td>
+            </tr>
+            <tr>
+                <th>Authors</th>
+                <td><input type="text" class="form-control "  name="author"  [(ngModel)]="authors" placeholder="e.g Firstname Lastname, Firstname Lastname" required size="50"></td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td><select class="form-control" name="genres" id="genres" multiple size="1" [(ngModel)]="selectedGenres" required>
+                    <option *ngFor="let genre of genres" value="{{genre.name}}">{{genre.name}}</option>
+                </select></td>
+                
+            </tr>
+            <tr>
+                <th>Publisher</th>
+                <td><input type="text" class="form-control " name="publisher" [(ngModel)]="book.publisher" required></td>
+            </tr>
+            <tr>
+                <th>Year published</th>
+                <td><input type="number" class="form-control " name="yearPublished" [(ngModel)]="book.yearPublished" min=1900 max= 2022 required></td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td><input type="text" class="form-control " name="language" [(ngModel)]="book.language" required></td>
+            </tr>
+            <tr *ngIf="user.type!='reader'">
+                <th>Days to read</th>
+                <td> <input type="number" class="form-control " name="days" id="days" [(ngModel)]="book.days" min="14" value="14" required></td>
+            </tr>
+            <tr *ngIf="user.type!='reader'" >
+                <th>Quantity</th>
+                <td> <input type="number" class="form-control " name="quantity" id="quantity" [(ngModel)]="book.quantity" min="1" value="5" required></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" align="center"> <button type="submit"  (click)="form.checkValidity()? addBook() : null" class="btn btn-light" >Add book</button></td>
+            </tr>
+        </table>
+    </form>
+   
+    
+</div>
+

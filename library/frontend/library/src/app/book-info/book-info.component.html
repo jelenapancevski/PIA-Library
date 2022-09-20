@@ -1,0 +1,113 @@
+<div *ngIf="editbook==false">
+    <img src="{{book.image}}" style="float:left ;" class="frontimg" >
+    <button *ngIf="user.type=='moderator'" (click)="editbook=true" class="btn btn-light">Edit book information</button>
+    <table class="bookInfo">
+        <tr>
+            
+            <td>  <h2>{{book.title}}</h2> </td>
+        </tr>
+        <tr>
+            
+        <td><h5>
+        <ul style="list-style-type:none; text-align: left; display: inline;"> 
+         <li *ngFor="let author of book.authors" style="display: inline;">                
+             <p> {{author.firstname}} &nbsp; {{ author.lastname}}</p>               
+        </li>            </ul>
+            </h5></td>
+        </tr>
+        <tr> 
+            <td> Genres:
+                <ul style="list-style-type:none; text-align: left; display: inline;"> 
+                    <li *ngFor="let genre of book.genres" style="display: inline;">
+                   {{genre}}  &nbsp;
+                    
+                    </li>
+                    </ul>  
+            </td>
+        </tr>
+        <tr>
+           
+            <td>Publisher: {{book.publisher}}</td>
+            
+        </tr>
+        <tr>
+            <td>Year published: {{book.yearPublished}}</td>
+        </tr>
+        <tr>
+            <td> Language: {{book.language}}</td>
+        </tr>
+    </table>
+    
+    <p style="font-size: large;">Books available : {{book.quantity}}</p> 
+    
+    <p style="font-size: large;">{{message}}</p>
+
+    <button *ngIf="canborrow" (click)="borrow()" class="btn btn-light">Borrow</button>
+    <button *ngIf="canreserve" (click)="reserve()" class="btn btn-light">Reserve</button>
+    <br>
+    <br>
+
+    <div *ngIf="!noreviews" style="display: inline;">
+        <p style="font-size: large; display: inline;" >Review : {{review}} </p> 
+        <img class='star' *ngFor="let star of stars" src="{{star}}">
+       
+        
+    </div>
+    <div *ngIf="noreviews" style="font-size: large; display: inline;">
+    Currently there are no reviews for this book.
+    </div>
+    <div *ngIf="!noreviews" style="float:bottom ; vertical-align: bottom;">
+    Comments
+    <table style="min-width:fit-content">
+        <tr *ngFor="let comment of book.comments" style="min-width:100%">
+            <td>
+                <table style="min-width:100%">
+                    <tr style="min-width:100%">
+                        <th  style="min-width:100%">{{comment.username}}
+                            <img class='starmini' *ngFor="let star of comment.stars" src="{{star}}">
+                        </th>
+                        
+                        <td align="right" colspan="2">{{comment.day}}/{{comment.month}}/{{comment.year}} &nbsp; {{comment.hours}}:{{comment.minutes}}</td>
+                        <td align="right" *ngIf="comment.edited">Edited</td>
+                    </tr>
+                    <tr >
+                        <td *ngIf="comment.username!=user.username" colspan="3">
+                            <textarea cols="50" rows="3" type="text"  name="comment" id="comment" readonly value="{{comment.comment}}"  class="form-control comment" maxlength="1000" style="min-width: 100%;  resize: none;" disabled> </textarea>
+                        </td>
+                        <td *ngIf=" comment.username==user.username" colspan="3"> <!--!comment.edited &&-->
+                            <textarea  cols="50" rows="3" type="text" name="comment" id="comment" value="{{comment.comment}}" class="form-control comment nonreadable" [(ngModel)]="editcomment" maxlength="1000" style="display: inline; min-width: 100%;  resize: none;" >
+                            </textarea>
+                        </td>
+                        <td style=" display: inline;"> <button class="btn btn-light" *ngIf=" comment.username==user.username" (click)="edit()" >Edit</button></td> <!--!comment.edited &&-->
+                    </tr>
+                   
+                </table>
+            </td>    
+        </tr>
+    
+        
+    </table>
+    </div>
+    <table>
+        <tr *ngIf=" (taken || read) && nocomment">
+            <th>Leave comment 
+                <img class='starmini' *ngFor="let star of newstars" src="{{star.image}}"  id="{{star.id}}" (click)="setStars(star.id)">
+                <br> 
+                <textarea name="comm" id="comm" cols="60" rows="3" maxlength="1000" [(ngModel)]="newcomment" style="resize:none"></textarea>
+                
+            </th>
+            
+        </tr>
+        <tr *ngIf=" (taken || read)  && nocomment">
+            <td ><button class="btn btn-light"  (click)="comment()" style="float: right;">Comment</button></td>
+        </tr>
+        
+    </table>
+</div>
+
+
+
+
+<div *ngIf="editbook==true">
+<app-editbook [book]="book"></app-editbook>
+</div>

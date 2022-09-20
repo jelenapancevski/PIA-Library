@@ -1,0 +1,455 @@
+[{
+  "_id": {
+    "$oid": "62e931ebe37af64f6f0fabf6"
+  },
+  "id": 0,
+  "username": "jelena",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1659477600000"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1661543423284"
+    }
+  },
+  "days": 25,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "62ebacf37486ef5028a40792"
+  },
+  "id": 1,
+  "username": "jelena",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1660649203756"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1661970455464"
+    }
+  },
+  "days": 20
+},{
+  "_id": {
+    "$oid": "62ebb27a7486ef5028a40793"
+  },
+  "id": 2,
+  "username": "jelena",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1660484816416"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1661700067812"
+    }
+  },
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "62efb6a578497572b847faba"
+  },
+  "id": 7,
+  "username": "petitonion",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1660395429774"
+    }
+  },
+  "dateReturned": null,
+  "days": 20
+},{
+  "_id": {
+    "$oid": "62f1b63fd6a5366da09e09f9"
+  },
+  "id": 1,
+  "username": "petitonion",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1657675199229"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1659374760564"
+    }
+  },
+  "days": 20
+},{
+  "_id": {
+    "$oid": "62f1b650d6a5366da09e09fa"
+  },
+  "id": 4,
+  "username": "petitonion",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1660008016291"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1661709947197"
+    }
+  },
+  "days": 14
+},{
+  "_id": {
+    "$oid": "630a2e9e020ca13a8c614619"
+  },
+  "id": 2,
+  "username": "ninas",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1660575032178"
+    }
+  },
+  "dateReturned": null,
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630a70f0020ca13a8c61461b"
+  },
+  "id": 8,
+  "username": "mixa",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661023856284"
+    }
+  },
+  "dateReturned": null,
+  "days": 20,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630a70ff020ca13a8c61461c"
+  },
+  "id": 7,
+  "username": "mixa",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661628671245"
+    }
+  },
+  "dateReturned": null,
+  "days": 20,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630a73e9020ca13a8c614622"
+  },
+  "id": 11,
+  "username": "djole",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661629417642"
+    }
+  },
+  "dateReturned": null,
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630a74c5020ca13a8c614625"
+  },
+  "id": 12,
+  "username": "djole",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661629637097"
+    }
+  },
+  "dateReturned": null,
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba1aee4245cfbaa038e2f"
+  },
+  "id": 28,
+  "username": "jelena",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661706670781"
+    }
+  },
+  "dateReturned": null,
+  "days": 25,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba6e8e4245cfbaa038ffc"
+  },
+  "id": 24,
+  "username": "ninas",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1659375208954"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1661189732155"
+    }
+  },
+  "days": 25,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba6f6e4245cfbaa039005"
+  },
+  "id": 25,
+  "username": "ninas",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661708022786"
+    }
+  },
+  "dateReturned": null,
+  "days": 23,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba7aae4245cfbaa039044"
+  },
+  "id": 5,
+  "username": "ninas",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1659634602113"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1661018449661"
+    }
+  },
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba80ce4245cfbaa03906a"
+  },
+  "id": 10,
+  "username": "jelena",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661708300513"
+    }
+  },
+  "dateReturned": null,
+  "days": 20,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba834e4245cfbaa03907b"
+  },
+  "id": 23,
+  "username": "ninas",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661708340840"
+    }
+  },
+  "dateReturned": null,
+  "days": 15,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba879e4245cfbaa0390b3"
+  },
+  "id": 3,
+  "username": "nina",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1656438009352"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1657132530793"
+    }
+  },
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba883e4245cfbaa0390bc"
+  },
+  "id": 4,
+  "username": "nina",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1660671619608"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1661708510753"
+    }
+  },
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba948e4245cfbaa0390eb"
+  },
+  "id": 5,
+  "username": "nina",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1651772616296"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1653676829807"
+    }
+  },
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630ba9d6e4245cfbaa039121"
+  },
+  "id": 8,
+  "username": "djole",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1659462358816"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1661190373856"
+    }
+  },
+  "days": 20,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630bab24e4245cfbaa03914d"
+  },
+  "id": 19,
+  "username": "djole",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1657302692558"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1659203514143"
+    }
+  },
+  "days": 25,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630bacd5e4245cfbaa0391c0"
+  },
+  "id": 5,
+  "username": "mixa",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661709525717"
+    }
+  },
+  "dateReturned": null,
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630bad0de4245cfbaa0391f3"
+  },
+  "id": 5,
+  "username": "djole",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661709581220"
+    }
+  },
+  "dateReturned": null,
+  "days": 14,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630badf0e4245cfbaa03925b"
+  },
+  "id": 1,
+  "username": "nina",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1652378608629"
+    }
+  },
+  "dateReturned": {
+    "$date": {
+      "$numberLong": "1653676893528"
+    }
+  },
+  "days": 20,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630bae8be4245cfbaa0392d0"
+  },
+  "id": 10,
+  "username": "petitonion",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661709963140"
+    }
+  },
+  "dateReturned": null,
+  "days": 20,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630bae9be4245cfbaa0392dc"
+  },
+  "id": 17,
+  "username": "petitonion",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661709979323"
+    }
+  },
+  "dateReturned": null,
+  "days": 20,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630bb62175b72a172a8b3915"
+  },
+  "id": 17,
+  "username": "nina",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661711905308"
+    }
+  },
+  "dateReturned": null,
+  "days": 20,
+  "reservation": false
+},{
+  "_id": {
+    "$oid": "630bb73c75b72a172a8b3962"
+  },
+  "id": 24,
+  "username": "nina",
+  "dateTaken": {
+    "$date": {
+      "$numberLong": "1661712188901"
+    }
+  },
+  "dateReturned": null,
+  "days": 25,
+  "reservation": false
+}]
